@@ -161,7 +161,7 @@ const genByTemp = ({
 
 const genMockFiles = (mockFunction: string[]) => {
   return prettierFile(` 
-// @ts-ignore
+// @ts-nocheck
 export default {
 ${mockFunction.join('\n,')}
     }`)[0];
