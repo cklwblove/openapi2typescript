@@ -17,7 +17,7 @@ const getImportStatement = (requestLibPath: string) => {
   if (requestLibPath) {
     return `import request from '${requestLibPath}'`;
   }
-  return `import { request } from "umi"`;
+  return `import { request } from "winjs"`;
 };
 
 export type GenerateServiceProps = {
@@ -223,7 +223,7 @@ export const generateService = async ({
   if (mockFolder) {
     await mockGenerator({
       openAPI,
-      mockFolder: mockFolder || './mocks/',
+      mockFolder: mockFolder || './mock/',
     });
   }
 };

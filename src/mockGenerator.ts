@@ -154,7 +154,7 @@ const genByTemp = ({
     }
   });
 
-  return `'${method.toUpperCase()} ${securityPath}': (req: Request, res: Response) => {
+  return `'${method.toUpperCase()} ${securityPath}': (req, res) => {
     res.status(${status}).send(${data});
   }`;
 };
@@ -162,8 +162,6 @@ const genByTemp = ({
 const genMockFiles = (mockFunction: string[]) => {
   return prettierFile(` 
 // @ts-ignore
-import { Request, Response } from 'express';
-
 export default {
 ${mockFunction.join('\n,')}
     }`)[0];

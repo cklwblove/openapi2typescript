@@ -5,7 +5,7 @@
     "target": "ES2015",
     "module": "CommonJS",
     "moduleResolution": "node",
-    "importHelpers": true,
+    "importHelpers": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
